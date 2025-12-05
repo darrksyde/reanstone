@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Section, Heading, RevealText, Button, Card, Badge } from '../components/UI';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { Anchor, Zap, Settings, Truck, Leaf, Globe, ArrowRight, CheckCircle2, Briefcase, Building2, HardHat, Ship, ShieldCheck, Users } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
@@ -130,25 +130,37 @@ const Home: React.FC = () => {
         <div className="w-full md:w-1/2 h-[50vh] md:h-auto order-1 md:order-2 relative bg-brand-dark overflow-hidden clip-diagonal md:clip-none">
            {/* Slideshow */}
            <div className="absolute inset-0">
-             <AnimatePresence mode="wait">
+             {/* Base layer - always show current image without animation as fallback */}
+             <div className="absolute inset-0">
+               <img 
+                 src={heroImages[currentSlide]} 
+                 alt="Hero background"
+                 className="w-full h-full object-cover"
+               />
+             </div>
+             
+             {/* Animated layers */}
+             {heroImages.map((image, index) => (
                <motion.div
-                 key={currentSlide}
-                 initial={{ opacity: 0, scale: 1.1 }}
-                 animate={{ opacity: 1, scale: 1 }}
-                 exit={{ opacity: 0 }}
+                 key={index}
+                 initial={false}
+                 animate={{ 
+                   opacity: index === currentSlide ? 1 : 0,
+                   scale: index === currentSlide ? 1 : 1.1
+                 }}
                  transition={{ 
-                   opacity: { duration: 1, ease: [0.25, 0.1, 0.25, 1] },
+                   opacity: { duration: 1.2, ease: [0.25, 0.1, 0.25, 1] },
                    scale: { duration: 6, ease: "linear" }
                  }}
                  className="absolute inset-0"
                >
                  <img 
-                   src={heroImages[currentSlide]} 
-                   alt={`Hero slide ${currentSlide + 1}`}
+                   src={image} 
+                   alt={`Hero slide ${index + 1}`}
                    className="w-full h-full object-cover"
                  />
                </motion.div>
-             </AnimatePresence>
+             ))}
 
              {/* Overlays for readability and branding */}
              <div className="absolute inset-0 bg-brand-primary/20 mix-blend-overlay"></div>
