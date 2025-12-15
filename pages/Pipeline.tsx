@@ -65,14 +65,14 @@ const Pipeline: React.FC = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {[
-            "Pipeline fabrication and spool welding",
-            "Pressure testing and integrity assessments",
-            "Instrumentation installation and calibration",
-            "Valve servicing and replacements",
-            "Shutdown and turnaround support",
-            "Flow assurance and process optimization",
-            "Corrosion inspection and mitigation",
-            "System troubleshooting and diagnostics"
+            "Pipeline Fabrication and Spool Welding",
+            "Pressure Testing and Integrity Assessments",
+            "Instrumentation Installation and Calibration",
+            "Valve Servicing and Replacements",
+            "Shutdown and Turnaround Support",
+            "Flow Assurance and Process Optimization",
+            "Corrosion Inspection and Mitigation",
+            "System Troubleshooting and Diagnostics"
           ].map((item, i) => (
             <RevealText key={i} delay={i * 0.05}>
               <Card className="h-full bg-white hover:shadow-2xl transition-all duration-500 ease-out border border-gray-100 hover:border-brand-primary/30">

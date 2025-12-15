@@ -68,15 +68,15 @@ const EPPM: React.FC = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {[
-            "Feasibility studies and conceptual design",
-            "FEED and detailed engineering",
-            "Structural and mechanical design",
-            "Electrical and instrumentation engineering",
-            "Project planning and scheduling",
-            "Cost estimation and budgeting",
-            "Engineering reviews and validation",
-            "Risk assessment and mitigation",
-            "Total project lifecycle management"
+            "Feasibility Studies and Conceptual Design",
+            "FEED and Detailed Engineering",
+            "Structural and Mechanical Design",
+            "Electrical and Instrumentation Engineering",
+            "Project Planning and Scheduling",
+            "Cost Estimation and Budgeting",
+            "Engineering Reviews and Validation",
+            "Risk Assessment and Mitigation",
+            "Total Project Lifecycle Management"
           ].map((item, i) => (
             <RevealText key={i} delay={i * 0.05}>
               <Card className="h-full bg-white hover:shadow-2xl transition-all duration-500 ease-out border border-gray-100 hover:border-brand-primary/30">

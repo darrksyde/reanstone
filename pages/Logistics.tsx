@@ -65,14 +65,14 @@ const Logistics: React.FC = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {[
-            "Strategic procurement and sourcing",
-            "Vendor qualification and management",
-            "Technical material verification",
-            "Inventory and warehousing support",
-            "Customs documentation",
-            "Transportation and last mile delivery",
-            "Logistics coordination for heavy and sensitive cargo",
-            "Real-time tracking and reporting"
+            "Strategic Procurement and Sourcing",
+            "Vendor Qualification and Management",
+            "Technical Material Verification",
+            "Inventory and Warehousing Support",
+            "Customs Documentation",
+            "Transportation and Last Mile Delivery",
+            "Logistics Coordination for Heavy and Sensitive Cargo",
+            "Real-time Tracking and Reporting"
           ].map((item, i) => (
             <RevealText key={i} delay={i * 0.05}>
               <Card className="h-full bg-white hover:shadow-2xl transition-all duration-500 ease-out border border-gray-100 hover:border-brand-primary/30">

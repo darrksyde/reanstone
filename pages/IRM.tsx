@@ -65,15 +65,15 @@ const IRM: React.FC = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {[
-            "ROV and sonar inspections",
-            "Cathodic protection surveys",
-            "Non-destructive testing",
-            "Underwater welding and repair",
-            "Subsea equipment installation",
-            "Pipeline and riser assessments",
-            "Biofouling removal",
-            "Emergency response support",
-            "Integrity monitoring and reporting"
+            "ROV and Sonar Inspections",
+            "Cathodic Protection Surveys",
+            "Non-destructive Testing",
+            "Underwater Welding and Repair",
+            "Subsea Equipment Installation",
+            "Pipeline and Riser Assessments",
+            "Biofouling Removal",
+            "Emergency Response Support",
+            "Integrity Monitoring and Reporting"
           ].map((item, i) => (
             <RevealText key={i} delay={i * 0.05}>
               <Card className="h-full bg-white hover:shadow-2xl transition-all duration-500 ease-out border border-gray-100 hover:border-brand-primary/30">
